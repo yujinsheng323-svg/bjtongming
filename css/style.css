@@ -1,0 +1,308 @@
+/*
+   Beijing Tongming Technology And Trade Co., Ltd.
+   Main Stylesheet - Refined Warmer Theme
+*/
+
+:root {
+    --primary-color: #ff8c00; /* DarkOrange */
+    --primary-dark: #e67e22;
+    --primary-light: #fff3e0;
+    --secondary-color: #d35400;
+    --accent-color: #f39c12;
+    --text-color: #333333;
+    --light-text: #666666;
+    --bg-color: #fffdfb; /* Very warm white */
+    --card-bg: #ffffff;
+    --footer-bg: #3e2723; /* Very dark warm brown */
+    --white: #ffffff;
+    --border-color: #fcece0;
+    --max-width: 1100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Header & Navigation */
+header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.nav-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    letter-spacing: -0.5px;
+}
+
+.logo img {
+    height: 36px;
+    margin-right: 12px;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 35px;
+}
+
+.nav-links a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    padding: 120px 20px;
+    text-align: center;
+    background: radial-gradient(circle at top, #fffaf0 0%, #fffdfb 100%);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 24px;
+    color: var(--primary-dark);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--light-text);
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Section Common */
+section {
+    padding: 100px 20px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section-title {
+    font-size: 2.25rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.section-subtitle {
+    color: var(--light-text);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Grid & Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    border: 1px solid var(--border-color);
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    box-shadow: 0 15px 40px rgba(230, 126, 34, 0.1);
+    border-color: var(--primary-color);
+}
+
+.card-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-dark);
+}
+
+/* Page Specific: Team & Business */
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sub-section {
+    margin-bottom: 60px;
+}
+
+.sub-section h2 {
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 15px;
+}
+
+/* Contact Page */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.contact-info div {
+    margin-bottom: 30px;
+}
+
+.contact-info h4 {
+    color: var(--primary-dark);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+    background: var(--footer-bg);
+    color: #ecf0f1;
+    padding: 80px 20px 40px;
+}
+
+.footer-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 80px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-section h3 {
+    color: var(--white);
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+}
+
+.footer-section p {
+    color: #bdc3c7;
+    margin-bottom: 10px;
+}
+
+.footer-links-list li {
+    margin-bottom: 12px;
+}
+
+.footer-links-list a {
+    color: #bdc3c7;
+}
+
+.footer-links-list a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding-top: 40px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #95a5a6;
+}
+
+.policy-links {
+    margin-top: 15px;
+}
+
+.policy-links a {
+    margin: 0 15px;
+    color: #95a5a6;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
